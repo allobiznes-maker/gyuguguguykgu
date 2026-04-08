@@ -5,18 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>.</title>
   <style>
-    * { margin: 0; padding: 0; }
-    body { background: #000; height: 100vh; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #000;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    button {
+      background: #1db954;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 140px;
+      height: 140px;
+      font-size: 56px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
-  <audio id="snd" src="sound.mp3" autoplay playsinline></audio>
-  <script>
-    var a = document.getElementById('snd');
-    a.play();
-    document.addEventListener('touchstart', function() {
-      a.play();
-    }, { once: true });
-  </script>
+  <audio id="snd" src="sound.mp3"></audio>
+  <button onclick="document.getElementById('snd').play()">▶</button>
 </body>
 </html>
