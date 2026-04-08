@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>.</title>
+  <style>
+    * { margin: 0; padding: 0; }
+    body { background: #000; height: 100vh; }
+  </style>
+</head>
+<body>
+  <audio id="snd" src="sound.mp3" autoplay playsinline></audio>
+  <script>
+    var a = document.getElementById('snd');
+    a.play();
+    document.addEventListener('touchstart', function() {
+      a.play();
+    }, { once: true });
+  </script>
+</body>
+</html>
